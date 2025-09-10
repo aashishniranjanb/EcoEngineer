@@ -212,5 +212,5 @@ if st.session_state.solar_completed:
     st.success(f"🎉 Completed! Score: {st.session_state.solar_score}/10")
     if "Solar Specialist" not in st.session_state.achievements:
         st.session_state.achievements.append("Solar Specialist")
-    if st.button("← Back to Home"):
-        st.experimental_set_query_params()
+    if st.button("← Back to Home", key="back_to_home_btn"):
+        st.experimental_rerun()  # or your navigation logic
