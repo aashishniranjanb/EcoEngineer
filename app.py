@@ -87,7 +87,7 @@ if st.sidebar.button("🔴 Reset Progress"):
 # --- Header Section ---
 st.markdown("""
 <div class="header-container">
-    <h1>🌍 EcoEngineer: Core Concepts</h1>
+    <h1>🌍 Abhigyan '25 EcoEngineer</h1>
     <p>A foundational challenge for future engineers – learn renewable energy through interactive quizzes & diagrams.</p>
 </div>
 """, unsafe_allow_html=True)
@@ -127,4 +127,5 @@ st.markdown("""
     Made by Aashish Niranjan B
 </div>
 """, unsafe_allow_html=True)
+
 
