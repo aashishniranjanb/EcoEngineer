@@ -2,7 +2,7 @@ import streamlit as st
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="🌍 EcoEngineer - Core Concepts",
+    page_title="🌍 Abhigyan '25 EcoEngineer",
     page_icon="🌱",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -96,32 +96,35 @@ st.markdown("""
 st.info("ℹ️ Use the **sidebar** to navigate: Start with **Solar PV**, then continue to **Wind**, **Hydro**, and **Biomass** step by step.")
 
 # --- System Selection ---
-st.markdown("## ⚡ Select a System to Explore")
+st.markdown("## ⚡ Available Systems")
 
 systems = [
-    {"name": "Solar PV System", "icon": "🔆", "file": "pages/1_Solar_PV_System.py"},
-    {"name": "Wind Energy", "icon": "🌪️", "file": "pages/2_Wind_Energy.py"},
-    {"name": "Hydroelectric Power", "icon": "💧", "file": "pages/3_Hydroelectric_Power.py"},
-    {"name": "Biomass Energy", "icon": "🌱", "file": "pages/4_Biomass_Energy.py"},
+    {"name": "Solar PV System", "icon": "🔆"},
+    {"name": "Wind Energy", "icon": "🌪️"},
+    {"name": "Hydroelectric Power", "icon": "💧"},
+    {"name": "Biomass Energy", "icon": "🌱"},
 ]
 
 rows = st.columns(2)
 for i, sys in enumerate(systems):
     with rows[i % 2]:
         completed = sys["name"] in st.session_state.completed_systems
-        status = "✅" if completed else "▶️"
+        status = "✅ Completed" if completed else "▶️ Pending"
         st.markdown(f"""
         <div class="system-card">
-            <h3>{sys['icon']} {sys['name']} {status}</h3>
-            <a href="{sys['file']}" target="_self">
-                <button>Start Challenge</button>
-            </a>
+            <h3>{sys['icon']} {sys['name']} </h3>
+            <p style="color:#2e7d32; font-weight:600;">{status}</p>
+            <p style="font-size:0.9rem; color:#388e3c;">👉 Use the sidebar to select this challenge</p>
         </div>
         """, unsafe_allow_html=True)
+
 
 # --- Footer ---
 st.markdown("""
 <div class="footer">
-    🚀 Built with ❤️ for Future Engineers | EcoEngineer™ 2025
+    🚀 Built with ❤️ for Future Engineers | EcoEngineer™ 2025<br>
+        Abhigyan '25 <br>
+    Made by Aashish Niranjan B
 </div>
 """, unsafe_allow_html=True)
+
